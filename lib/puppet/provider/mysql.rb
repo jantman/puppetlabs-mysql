@@ -7,9 +7,9 @@ class Puppet::Provider::Mysql < Puppet::Provider
   ENV['PATH'] = ENV['PATH'] + ':/usr/libexec:/usr/local/libexec:/usr/local/bin'
 
   # rubocop:disable Style/HashSyntax
-  commands :mysql_raw  => 'mysql'
-  commands :mysqld     => 'mysqld'
-  commands :mysqladmin => 'mysqladmin'
+  commands :mysql_raw  => 'mariadb'
+  commands :mysqld     => 'mariadbd'
+  commands :mysqladmin => 'mariadb-admin'
   # rubocop:enable Style/HashSyntax
 
   # Optional defaults file
